@@ -1,7 +1,7 @@
 # FINAL PROJECT
-## Timothy Bui
-## CIS 1051
-## Section 004
+Timothy Bui
+CIS 1051
+Section 004
 
 ## INSTALLATION:
 
@@ -14,12 +14,16 @@
 
 Menu:
 'ENTER' - starts game
+
 'ESC' - quits application
 
 In Game:
 'A' - moves spaceship right
+
 'D' - moves spaceship left
+
 'SPACE' - fires spaceship's laser
+
 'ESC' - pauses the game
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
