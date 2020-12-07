@@ -9,6 +9,10 @@ Section 004
 
 Pilot a spaceship against unending waves of alien invaders to protect earth!
 
+## VIDEO WALKTHROUGH
+
+https://youtu.be/uzgadoHayJM
+
 ## INSTALLATION:
 
 1. Download the folder "intergalacticAttackers".
