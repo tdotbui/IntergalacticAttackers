@@ -23,6 +23,7 @@ function love.load()
     smallFont = love.graphics.newFont('font.ttf', 8)
     largeFont = love.graphics.newFont('font.ttf', 16)
 
+    love.audio.setVolume(0.1)
     sounds = {
         ['kill'] = love.audio.newSource('sounds/kill.wav', 'static'),
         ['shoot'] = love.audio.newSource('sounds/shoot.wav', 'static')
