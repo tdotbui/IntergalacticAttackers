@@ -1,6 +1,8 @@
 # FINAL PROJECT
 Timothy Bui
+
 CIS 1051
+
 Section 004
 
 ## INSTALLATION:
@@ -13,11 +15,13 @@ Section 004
 ## CONTROLS:
 
 Menu:
+
 'ENTER' - starts game
 
 'ESC' - quits application
 
 In Game:
+
 'A' - moves spaceship right
 
 'D' - moves spaceship left
