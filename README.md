@@ -5,6 +5,10 @@ CIS 1051
 
 Section 004
 
+## OVERVIEW
+
+Pilot a spaceship against unending waves of alien invaders to protect earth!
+
 ## INSTALLATION:
 
 1. Download the folder "intergalacticAttackers".
