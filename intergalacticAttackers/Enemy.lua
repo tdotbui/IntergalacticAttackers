@@ -79,7 +79,7 @@ end
 
 function Enemy:increment()
     lvlCounter = lvlCounter + 1
-    ENEMY_SPEED = ENEMY_SPEED * 1.1
+    ENEMY_SPEED = ENEMY_SPEED * 1.05
     enemyAmountY = enemyAmountY + 1
     enemyAmountX = enemyAmountX + 1
 end

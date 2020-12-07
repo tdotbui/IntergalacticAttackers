@@ -21,3 +21,7 @@ end
 function Player:render()
     love.graphics.draw(spaceship, self.x, self.y)
 end
+
+function Player:paused()
+    player.dx = 0
+end

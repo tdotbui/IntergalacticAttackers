@@ -51,6 +51,7 @@ function love.load()
     enemy:insert(1, 9)
 
     highScore = 0
+    enemy:paused()
     enemy:default()
     
     gameState = 'menu'
@@ -62,12 +63,16 @@ end
 
 function love.update(dt)
     -- player movement
-    if love.keyboard.isDown('a') then
-        player.dx = -PLAYER_SPEED
-    elseif love.keyboard.isDown('d') then
-        player.dx = PLAYER_SPEED
+    if gameState == 'paused' then
+        player:paused()
     else
-        player.dx = 0
+        if love.keyboard.isDown('a') then
+            player.dx = -PLAYER_SPEED
+        elseif love.keyboard.isDown('d') then
+            player.dx = PLAYER_SPEED
+        else
+            player.dx = 0
+        end
     end
 
     enemy:update(dt)
@@ -106,9 +111,9 @@ function love.keypressed(key)
         if key == 'escape' then
             love.event.quit()
         elseif key == 'return' then
+            enemy:resume()
             gameState = 'play'
         end
-        enemy:default()
     end
 
     if gameState == 'paused' then
@@ -151,12 +156,10 @@ function love.keypressed(key)
         if key == 'return' or key == 'escape' then
             gameState = 'menu'
             enemy:reset()
+            enemy:default()
             enemy:insert(enemyAmountX, enemyAmountY)
+            enemy:paused()
         end
-        lvlCounter = 1
-        ENEMY_SPEED = 75
-        enemyAmountY = 9
-        enemyAmountX = 1
     end
 end
 
@@ -168,7 +171,7 @@ function love.draw()
     if gameState == 'menu' then
         love.graphics.setColor(1, 1, 1)
         love.graphics.setFont(largeFont)
-        love.graphics.printf('Intergalatic Attackers', 0, 10, VIRTUAL_WIDTH, 'center')
+        love.graphics.printf('Intergalactic Attackers', 0, 10, VIRTUAL_WIDTH, 'center')
         love.graphics.setFont(smallFont)
         love.graphics.printf('Please read the README file for controls', 0, 30, VIRTUAL_WIDTH, 'center')
         love.graphics.printf('Press ENTER to start', 0, 40, VIRTUAL_WIDTH, 'center')
